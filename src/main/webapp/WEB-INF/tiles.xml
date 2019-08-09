@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Definición base para páginas -->
+	<definition name="base-definition"
+		template="/WEB-INF/views/tiles/templates/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header"
+			value="" />
+		<put-attribute name="search"
+			value="" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/templates/footer.jsp" />
+	</definition>
+
+	<definition name="base-definition-error"
+		template="/WEB-INF/views/tiles/templates/layoutError.jsp">
+		<put-attribute name="title" value="Error en el servidor" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer"
+			value="/WEB-INF/views/tiles/templates/footer.jsp" />
+	</definition>
+
+	<!-- Error Page -->
+	<definition name="errorPage" extends="base-definition-error">
+		<put-attribute name="header"
+			value="/WEB-INF/views/tiles/templates/header.jsp" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/errorPage.jsp" />
+	</definition>
+
+
+	<!-- Home Page -->
+	<definition name="home" extends="base-definition">
+		<put-attribute name="title"
+			value="Taller de Integradora" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/tiles/home.jsp" />
+	</definition>
+
+	<!-- Welcome Page -->
+	<definition name="welcome" extends="base-definition">
+		<put-attribute name="title"
+			value="Taller de Integradora" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/welcome.jsp" />
+	</definition>
+
+	<definition name="usarios" extends="base-definition">
+		<put-attribute name="title" value="Listado de Usuarios" />
+		<put-attribute name="body"
+			value="/WEB-INF/views/tiles/usuarios.jsp" />
+	</definition>
+
+	<!-- Definición de Usuarios -->
+	
+	<!-- Ventana inicio -->
+	<definition name="inicio" extends="base-definition">
+		<put-attribute name="title"
+			value="inicio" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/header.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/usuario/inicio.jsp" />
+	</definition>
+	
+	<!-- Listado de productos -->
+	<definition name="productos" extends="base-definition">
+		<put-attribute name="title"
+			value="Productos" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/header.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/usuario/productos.jsp" />
+	</definition>
+	
+	<!-- Muestra contacto -->
+	<definition name="contacto" extends="base-definition">
+		<put-attribute name="title"
+			value="Contacto" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/header.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/usuario/contacto1.jsp" />
+	</definition>
+	
+	<!-- Muestra Recargas-->
+	<definition name="recargas" extends="base-definition">
+		<put-attribute name="title"
+			value="Recargas" />
+		<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/header.jsp"/>	
+		<put-attribute name="body"
+			value="/WEB-INF/views/usuario/recargas.jsp" />
+	</definition>
+	
+	<!-- Muestra Impresiones-->
+	<definition name="impresion" extends="base-definition">
+		<put-attribute name="title"
+			value="Impresiones" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/header.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/usuario/impresion.jsp" />
+	</definition>
+	
+	
+	<!-- Definicion de cliente -->
+	
+	
+	
+	<!-- Ventana inicio -->
+	<definition name="inicio2" extends="base-definition">
+		<put-attribute name="title"
+			value="inicio" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headercli.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cliente/inicio2.jsp" />
+	</definition>
+	
+	<!-- Listado de productos -->
+	<definition name="productos2" extends="base-definition">
+		<put-attribute name="title"
+			value="Productos" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headercli.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cliente/productos2.jsp" />
+	</definition>
+	
+	<!-- Muestra contacto -->
+	<definition name="contacto2" extends="base-definition">
+		<put-attribute name="title"
+			value="Contacto" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headercli.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cliente/contacto2.jsp" />
+	</definition>
+	
+	<!-- Muestra Recargas-->
+	<definition name="recargas2" extends="base-definition">
+		<put-attribute name="title"
+			value="Recargas" />
+		<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headercli.jsp"/>	
+		<put-attribute name="body"
+			value="/WEB-INF/views/cliente/recargas2.jsp" />
+	</definition>
+	
+	<!-- Muestra Impresiones-->
+	<definition name="impresion2" extends="base-definition">
+		<put-attribute name="title"
+			value="Impresiones" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headercli.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cliente/impresiones2.jsp" />
+	</definition>
+	
+	<!-- Muestra modificar contraseña-->
+	<definition name="modificarcontraseña" extends="base-definition">
+		<put-attribute name="title"
+			value="Modificar contraseña" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headercli.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cliente/modcontra.jsp" />
+	</definition>
+	
+	
+	
+	
+	
+	
+	
+	<!-- Eliminar cuenta-->
+	<definition name="elicuenta" extends="base-definition">
+		<put-attribute name="title"
+			value="Eliminar cuenta" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headercli.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/cliente/eliminar.jsp" />
+	</definition>
+	
+	
+	
+	<!-- Definición de Administrador -->
+	
+	
+	<!-- Muestra Registrar-->
+	<definition name="registrar" extends="base-definition">
+		<put-attribute name="title"
+			value="Registar" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headeradmin.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/administrador/registrar.jsp" />
+	</definition>
+	
+	<!-- Muestra Agregar -->
+	<definition name="agregar" extends="base-definition">
+		<put-attribute name="title"
+			value="Agregar Producto" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headeradmin.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/administrador/agregar.jsp" />
+	</definition>
+	
+	<!-- Muestra modificar-->
+	<definition name="modificar" extends="base-definition">
+		<put-attribute name="title"
+			value="Modificar producto" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headeradmin.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/administrador/modificar.jsp" />
+	</definition>
+	
+	<!-- Muestra inventario-->
+	<definition name="inventario" extends="base-definition">
+		<put-attribute name="title"
+			value="Inventario" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headeradmin.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/administrador/inventario.jsp" />
+	</definition>
+	
+	
+	
+	
+	
+	
+	
+	<!-- cambiar contraseña administrador-->
+	
+	<definition name="modcontradmin" extends="base-definition">
+		<put-attribute name="title"
+			value="Cambiar contraseña de administrador"/>
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headeradmin.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/administrador/modcontradmin.jsp" />
+	</definition>
+	
+
+	
+	
+	
+	
+	
+	
+	
+	<!-- eliminar administrador-->
+	
+	<definition name="eliminaradmin" extends="base-definition">
+		<put-attribute name="title"
+			value="Eliminar cuenta de administrador" />
+			<put-attribute name="header"
+		    value="/WEB-INF/views/tiles/templates/headeradmin.jsp"/>
+		<put-attribute name="body"
+			value="/WEB-INF/views/administrador/eliminaradmin.jsp" />
+	</definition>
+
+</tiles-definitions>
